@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Mulish', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Rubik Dirt', cursive;
+  font-family: 'Share Tech Mono', monospace;  -webkit-font-smoothing: antialiased; */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
