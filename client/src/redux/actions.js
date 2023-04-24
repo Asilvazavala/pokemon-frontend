@@ -3,7 +3,7 @@ import axios from 'axios';
 // GET ALL POKEMON--------------------------------------------------------------------------------
 export const getAllPokemon = () => {
   return async (dispatch) => {
-    let json = await axios.get('http://localhost:3001/pokemon');
+    let json = await axios.get('https://pokemon-back-0lo0.onrender.com/pokemon');
     return dispatch({
       type: 'GET_POKEMON',
       payload: json.data
@@ -15,7 +15,7 @@ export const GET_POKEMON = 'GET_POKEMON';
 // GET ALL TYPES--------------------------------------------------------------------------------
 export const getAllTypes = () => {
   return async (dispatch) => {
-    let json = await axios.get('http://localhost:3001/type');
+    let json = await axios.get('https://pokemon-back-0lo0.onrender.com/type');
     return dispatch({
       type: 'GET_TYPES',
       payload: json.data
@@ -28,7 +28,7 @@ export const GET_TYPES = 'GET_TYPES';
 export const searchPokemonByName = (search) => {
   return async (dispatch) => {
     try {
-      let json = await axios.get(`http://localhost:3001/pokemon?name=${search}`);
+      let json = await axios.get(`https://pokemon-back-0lo0.onrender.com/pokemon?name=${search}`);
       return dispatch({
         type: 'SEARCH_POKEMON_BY_NAME',
         payload: json.data
@@ -81,7 +81,7 @@ export const FILTER_POKEMON_BY_TYPE= 'FILTER_POKEMON_BY_TYPE';
 export const getPokemonDetail = (id) => {
   return async function(dispatch) {
     try {
-      let json = await axios.get(`http://localhost:3001/pokemon/${id}`);
+      let json = await axios.get(`https://pokemon-back-0lo0.onrender.com/pokemon/${id}`);
       return dispatch ({
         type: 'GET_POKEMON_DETAIL',
         payload: json.data
@@ -97,7 +97,7 @@ export const GET_POKEMON_DETAIL= 'GET_POKEMON_DETAIL';
 // POST POKEMON -----------------------------------------------------------------------------------
 export const postPokemon = (payload) => {
   return async function ()  {
-    const newPokemon = await axios.post('http://localhost:3001/pokemon',payload);
+    const newPokemon = await axios.post('https://pokemon-back-0lo0.onrender.com/pokemon',payload);
     return newPokemon;
   }
 };
@@ -106,7 +106,7 @@ export const POST_POKEMON= 'POST_POKEMON';
 // DELETE POKEMON -----------------------------------------------------------------------------------
 export const deletePokemon = (id) => {
   return async function() {
-    const deletePokemon = await axios.delete(`http://localhost:3001/pokemon/${id}`);
+    const deletePokemon = await axios.delete(`https://pokemon-back-0lo0.onrender.com/pokemon/${id}`);
     return deletePokemon;
   }
 };
@@ -115,7 +115,7 @@ export const DELETE_POKEMON= 'DELETE_POKEMON';
 // UPDATE POKEMON -----------------------------------------------------------------------------------
 export const updatePokemon = (id, payload) => {
   return async function ()  {
-    const updatePokemon = await axios.put(`http://localhost:3001/pokemon/${id}`,payload);
+    const updatePokemon = await axios.put(`https://pokemon-back-0lo0.onrender.com/pokemon/${id}`,payload);
     return updatePokemon;
   }
 };
